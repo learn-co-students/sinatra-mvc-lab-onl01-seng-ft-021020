@@ -1,15 +1,15 @@
 class PigLatinizer
-  attr_reader :phrase
+  # attr_accessor :phrase
 
-  def initialize(phrase)
-    @phrase = phrase
-  end
+  # def initialize(phrase)
+  #   @phrase = phrase
+  # end
 
-  def pigify
-    words = self.phrase.split(' ') 
+  def piglatinize(phrase)
+    words = phrase.split(' ') 
     pig_words = []
     words.each do |word|
-      if word.index(/[aeiou]/) == 0
+      if word.index(/[AEIOUaeiou]/) == 0
         pig_words << "#{word}way"
       else
         i = word.index(/[aeiou]/)
