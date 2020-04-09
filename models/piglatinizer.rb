@@ -2,6 +2,7 @@ require 'pry'
 
 class PigLatinizer
 
+
   def has_vowel?(c)
    
     if c == nil || c == ''
@@ -42,6 +43,9 @@ end
      pig[0] = ''
      pig[0] = ''
      pig += c + "ay"
+     elsif has_vowel?(pig[0]) == true && has_vowel?(pig[1]) == true  
+    
+     pig += "way"
    end
    output += pig + " "
     # binding.pry
