@@ -6,9 +6,10 @@ class App < Sinatra::Base
     erb :user_input
   end
   
-  post '/piglatinizer' do 
+  post '/piglatinize' do 
+    @user_text = params[:user_phrase]
     
-    erb :piglatinizer
+    erb :piglatinize
   end
   
 end
